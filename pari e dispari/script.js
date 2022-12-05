@@ -12,7 +12,15 @@ do{
 }
 while(disparipari != 'pari' && disparipari != 'dispari');
 
-let primoNumero = generatorRandomNumbers(1, 5);
+let primoNumero
+do{
+    primoNumero = parseInt( prompt("inserisci un numero tra 1 e 5: "));
+        if(primoNumero < 1 || primoNumero > 5 || isNaN(primoNumero)){
+            alert("hai inserito un valore non valido")
+        }    
+}
+while(primoNumero < 1 || primoNumero > 5 || isNaN(primoNumero));
+
 let secondoNumero = generatorRandomNumbers(1, 5);
 console.log(`il primo numero è: ${primoNumero}`);
 console.log(`il secondo numero è: ${secondoNumero}`);
